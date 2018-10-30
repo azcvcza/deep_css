@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>三栏布局</title>
+</head>
+<style>
+    body {
+        text-align: center;
+        width:100%;
+        height:100%;
+    }
+
+    .wrapper {
+        width: 100%;
+        margin: 0;
+        height:80%;
+        text-align: left;
+    }
+
+    .content {
+        overflow: hidden;
+
+    }
+
+    .content .primary {
+        width: 70%;
+        padding-right: 20px;
+        height:100%;
+        float: right;
+        display: inline;
+        background-color: #fff;
+    }
+
+    .content .secondary {
+        width: 20%;
+        float: left;
+        height:100%;
+        display: inline;
+        background-color: lightgrey;
+    }
+    .content .primary .primary{
+        width:50%;
+        float:left;
+        height:100%;
+        display:inline;
+        background-color: yellow;
+    }
+    .content .primary .secondary{
+        width:30%;
+        float:right;
+        height:100%;
+        display: inline;
+        background-color: #58a;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="header">h</div>
+        <div class="content">
+            <div class="primary">
+                p
+                <div class="primary">pp</div>
+                <div class="secondary">ps</div>
+            </div>
+            <div class="secondary">s</div>
+        </div>
+        <div class="footer">f</div>
+    </div>
+</body>
+
+</html>
