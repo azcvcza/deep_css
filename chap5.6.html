@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>创建类似按钮的链接</title>
+</head>
+<style>
+    a#rect {
+        display: block;
+        width: 6.6em;
+        line-height: 1.4;
+        text-align: center;
+        text-decoration: none;
+        border: 1px solid #66a300;
+        background-color: #8cca12;
+        color: #fff;
+    }
+
+    a#circle {
+        display: block;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+        background-color: #8cca12;
+        color: #fff;
+    }
+
+    a:focus {
+        background-color: #f7a300;
+        border-color: #ff7400;
+        border: 3px solid orange;
+    }
+    /*提示*/
+    a.tooltip{
+        position:relative;
+    }
+    a.tooltip span{
+        display: none;
+    }
+    a.tooltip:hover span,a.tooltip:focus span{
+        display:block;
+        position:absolute;
+        top:1em;
+        left:1em;
+        padding:0.2em 0.6em;
+        border:1px solid #996633;
+        background-color:#ffff66;
+        color:#000;
+    }
+</style>
+
+<body>
+    <a id="rect" href="#">click click</a>
+    <a href="#" id="circle">click me</a>
+
+    <p>
+        <a id="position" href="www.baidu.com" class="tooltip">
+            AndyBudd
+            <span>(This website rocks)</span>
+        </a>
+    </p>
+</body>
+
+</html>
