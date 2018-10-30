@@ -105,6 +105,55 @@
     ul#img_nav a:hover, ul#img_nav a:focus{
         color:#333;
     }
+    /*下拉菜单*/
+    ul#sub_nav, ul#subnav ul{
+        margin:0;
+        padding:0;
+        list-style-type: none;
+        float:left;
+        border:1px solid #486B02;
+        background-color: #8bd400;
+    }
+
+    ul#sub_nav li{
+        float:left;
+        width:8em;
+        background-color: #8bd400;
+    }
+    ul#sub_nav li ul{
+        width:8em;
+        position:absolute;
+        left:-999em;/*设置为超出屏幕*/
+    }
+
+    #sub_nav li:hover ul{
+        left:auto;
+    }
+    #sub_nav a{
+        display: block;
+        color:#2b3f00;
+        text-decoration: none;
+        padding:.3em 1em;
+        border-right:1px solid #486B02;
+        border-left:1px solid #e4FFd3;
+    }
+    #sub_nav li li a{
+        border-top:1px solid #e4ffd3;
+        border-bottom:1px solid #486b02;
+        border-left:0;
+        border-right:0;
+    }
+
+    ul#sub_nav li:last-child a{
+        border-right:0;
+        border-bottom: 0;
+    }
+    #sub_nav a:hover, #sub_nav a:focus{
+        color:#e4ffd3;
+        background-color: #6da203;
+    }
+    /*图像提醒*/
+    
 </style>
 <body>
     列表前加图片
@@ -145,5 +194,25 @@
         <li><a href="#">sxzAxcvAD SDADA</a></li>
         
     </ul>
+    <br>
+    下拉菜单
+    <ul id="sub_nav">
+        <li><a href="/home/">HOME</a></li>
+        <li><a href="/products/">Products</a>
+            <ul>
+                <li><a href="/products/silverback/">SilverBack1</a></li>
+                <li><a href="/products/silverback/">SilverBack2</a></li>
+            </ul>
+        </li>
+        <li><a href="/services/">HOME</a>
+            <ul>
+                    <li><a href="/services/silverback/">SilverBack3</a></li>
+                    <li><a href="/services/silverback/">SilverBack4</a></li>
+                </ul>
+        </li>
+    </ul>
+    <br>
+    <p>图像提醒</p>
+
 </body>
 </html>
