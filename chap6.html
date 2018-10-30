@@ -1,160 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>List</title>
 </head>
-<style> 
+<style>
     /*给Li加上头符号*/
-    ul#first{
-        margin:0;
-        padding:0;
+    ul#first {
+        margin: 0;
+        padding: 0;
         list-style-type: none;
     }
-    ul#first li{
-        background:url(img/cd.png) no-repeat;
-        padding-left:128px;
-        
+
+    ul#first li {
+        background: url(img/cd.png) no-repeat;
+        padding-left: 128px;
+
     }
 
     /*竖直方向nav*/
-    ul#nav{
-        margin:0;
-        padding:0;
+    ul#nav {
+        margin: 0;
+        padding: 0;
         list-style-type: none;
-        width:8em;
+        width: 8em;
         background-color: #8bd400;
-        border:1px solid #486b02;
+        border: 1px solid #486b02;
     }
-    ul#nav a{
+
+    ul#nav a {
         display: block;
-        color:#2b3f00;
+        color: #2b3f00;
         text-decoration: none;
-        border-top:1px solid #e4ffd3;
-        border-bottom:1px solid #486b02;
-        background:url(img/cd.png) no-repeat 5% 50%;
-        padding:0.3em 1em;
+        border-top: 1px solid #e4ffd3;
+        border-bottom: 1px solid #486b02;
+        background: url(img/cd.png) no-repeat 5% 50%;
+        padding: 0.3em 1em;
     }
-    ul#nav a:last-child{
+
+    ul#nav a:last-child {
         display: block;
-        color:#2b3f00;
+        color: #2b3f00;
         text-decoration: none;
-        border-top:1px solid #e4ffd3;
-        border-bottom:0;
-        background:url(img/cd.png) no-repeat 5% 50%;
-        padding:0.3em 1em;
+        border-top: 1px solid #e4ffd3;
+        border-bottom: 0;
+        background: url(img/cd.png) no-repeat 5% 50%;
+        padding: 0.3em 1em;
     }
-    ul#nav a:hover,ul#nav a:focus,ul#nav a::selection{
-        color:#e4ffd3;
+
+    ul#nav a:hover,
+    ul#nav a:focus,
+    ul#nav a::selection {
+        color: #e4ffd3;
         background-color: #6da203;
     }
+
     /*水平导航*/
 
-    ol#pagination{
-        margin:0;
-        padding:0;
+    ol#pagination {
+        margin: 0;
+        padding: 0;
         list-style-type: none;
     }
-    ol#pagination li{
-        float:left;
-        margin-right:.6em;
+
+    ol#pagination li {
+        float: left;
+        margin-right: .6em;
     }
-    ol#pagination a, ol.pagination li::selection{
+
+    ol#pagination a,
+    ol.pagination li::selection {
         display: block;
-        padding:.2em .5em;
-        border:1px solid #ccc;
+        padding: .2em .5em;
+        border: 1px solid #ccc;
         text-decoration: none;
     }
-    ol#pagination a:hover,ol#pagination a:focus,ol#pagination li::selection{
+
+    ol#pagination a:hover,
+    ol#pagination a:focus,
+    ol#pagination li::selection {
         background-color: blue;
-        color:white;
+        color: white;
     }
-    ol#pagination a[rel="prev"]::before{
-        content:"\00AB";
-        padding-right:.5em;
+
+    ol#pagination a[rel="prev"]::before {
+        content: "\00AB";
+        padding-right: .5em;
     }
-    ol#pagination a[rel="after"]::after{
-        content:"\00BB";
-        padding-left:.5em;
+
+    ol#pagination a[rel="after"]::after {
+        content: "\00BB";
+        padding-left: .5em;
     }
+
     /*图形化导航*/
-    ul#img_nav{
-        margin:10px;
-        padding:0;
+    ul#img_nav {
+        margin: 10px;
+        padding: 0;
         list-style: none;
-        width:72em;
+        width: 72em;
         overflow: hidden;
         background: #faa819 url(img/run.jpg) repeat-x;
     }
-    ul#img_nav li{
-        float:left;
+
+    ul#img_nav li {
+        float: left;
     }
-    ul#img_nav a{
+
+    ul#img_nav a {
         display: block;
         padding: 0 3em;
         line-height: 2.1em;
-        text-decoration:none;
-        color:#fff;
+        text-decoration: none;
+        color: #fff;
         background: url(img/zhuti.png) repeat-y left top;
     }
-    ul#img_nav a:first{
+
+    ul#img_nav a:first {
         background-image: none;
     }
-    ul#img_nav a:hover, ul#img_nav a:focus{
-        color:#333;
+
+    ul#img_nav a:hover,
+    ul#img_nav a:focus {
+        color: #333;
     }
+
     /*下拉菜单*/
-    ul#sub_nav, ul#subnav ul{
-        margin:0;
-        padding:0;
+    ul#sub_nav,
+    ul#subnav ul {
+        margin: 0;
+        padding: 0;
         list-style-type: none;
-        float:left;
-        border:1px solid #486B02;
+        float: left;
+        border: 1px solid #486B02;
         background-color: #8bd400;
     }
 
-    ul#sub_nav li{
-        float:left;
-        width:8em;
+    ul#sub_nav li {
+        float: left;
+        width: 8em;
         background-color: #8bd400;
     }
-    ul#sub_nav li ul{
-        width:8em;
-        position:absolute;
-        left:-999em;/*设置为超出屏幕*/
+
+    ul#sub_nav li ul {
+        width: 8em;
+        position: absolute;
+        left: -999em;
+        /*设置为超出屏幕*/
     }
 
-    #sub_nav li:hover ul{
-        left:auto;
+    #sub_nav li:hover ul {
+        left: auto;
     }
-    #sub_nav a{
+
+    #sub_nav a {
         display: block;
-        color:#2b3f00;
+        color: #2b3f00;
         text-decoration: none;
-        padding:.3em 1em;
-        border-right:1px solid #486B02;
-        border-left:1px solid #e4FFd3;
-    }
-    #sub_nav li li a{
-        border-top:1px solid #e4ffd3;
-        border-bottom:1px solid #486b02;
-        border-left:0;
-        border-right:0;
+        padding: .3em 1em;
+        border-right: 1px solid #486B02;
+        border-left: 1px solid #e4FFd3;
     }
 
-    ul#sub_nav li:last-child a{
-        border-right:0;
+    #sub_nav li li a {
+        border-top: 1px solid #e4ffd3;
+        border-bottom: 1px solid #486b02;
+        border-left: 0;
+        border-right: 0;
+    }
+
+    ul#sub_nav li:last-child a {
+        border-right: 0;
         border-bottom: 0;
     }
-    #sub_nav a:hover, #sub_nav a:focus{
-        color:#e4ffd3;
+
+    #sub_nav a:hover,
+    #sub_nav a:focus {
+        color: #e4ffd3;
         background-color: #6da203;
     }
+
     /*图像提醒*/
-    
+    #imagemap {
+        width: 300px;
+        height: 180px;
+        position: relative;
+    }
+    #imagemap ul{
+        margin:0;
+        padding:0;
+        list-style: none;
+    }
+
+    #imagemap a{
+        position: absolute;
+        display: block;
+        width:50px;
+        height:60px;
+        text-indent:-1000em;
+        
+    }
+    #imagemap .rich a{
+        top:50px;
+        left:80px;
+        background-image: url(img/mv.png);
+    }
+    #imagemap .sophie a{
+        top:90px;
+        left:20px;
+        background-image: url(img/play.png);
+    }
+    #imagemap a:hover,#imagemap a:focus{
+        border:1px solid yellow;
+    }
 </style>
+
 <body>
     列表前加图片
     <ul id="first">
@@ -183,7 +246,7 @@
         <li><a href="#">Hecslc asdcx</a></li>
         <li><a href="" rel="after">Next</a></li>
     </ol>
-    
+
     <hr>
     <br>
     图形导航条
@@ -192,7 +255,7 @@
         <li><a href="#">sxzAxcvAD SDADA</a></li>
         <li><a href="#">sxzAxcvAD SDADA</a></li>
         <li><a href="#">sxzAxcvAD SDADA</a></li>
-        
+
     </ul>
     <br>
     下拉菜单
@@ -206,13 +269,21 @@
         </li>
         <li><a href="/services/">HOME</a>
             <ul>
-                    <li><a href="/services/silverback/">SilverBack3</a></li>
-                    <li><a href="/services/silverback/">SilverBack4</a></li>
-                </ul>
+                <li><a href="/services/silverback/">SilverBack3</a></li>
+                <li><a href="/services/silverback/">SilverBack4</a></li>
+            </ul>
         </li>
     </ul>
     <br>
     <p>图像提醒</p>
+    <div id="imagemap"><img src="img/run1.jpg" alt="some some some" width="300px" height="180px">
+        <ul class="image_map">
+            <li class="rich"><a href="#" title="rich">richard</a></li>
+            <li class="sophie"><a href="#" title="sopihe">sophie</a></li>
+           
+        </ul>
+    </div>
 
 </body>
+
 </html>
