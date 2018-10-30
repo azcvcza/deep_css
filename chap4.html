@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>chap4-视差滚动</title>
+</head>
+<style>
+    body{
+        background-image: url(img/run.jpg);
+        background-repeat: repeat-x;
+        background-color: #d3ff99;
+        background-position: 20% 0 ;
+    }
+    .midground{
+        background-image: url(img/run.jpg);
+        background-repeat:repeat-x;
+        background-color: transparent;
+        background-position:40% 0;
+    }
+    .foreground{
+        background-image: url(img/run1.jpg);
+        background-repeat: repeat-x;
+        background-color: transparent;
+        background-position: 150% 0;
+    }
+</style>
+<body>
+    <div class="midground">
+        <div class="foreground">
+            <p>hell o world</p>
+        </div>
+    </div>
+</body>
+</html>
