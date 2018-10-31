@@ -7,13 +7,68 @@
     <title>Climb Mountain</title>
 </head>
 <style>
+    ul#navigation_pri{
+        list-style:none;
+        margin:0;
+        position:absolute;
+        top:0;
+        left:415px;
+        font-size:19px;
+        font-weight: bold;
+        font-family: Hevetica,Arial,sans-serif;
+    }
+    ul#navigation_pri li{
+        float:left;
+        margin:0;
+        padding:30px 10px 0 10px;
+        height:3000px;
+    }
+    ul#navigation_pri li a{
+        color:#000;
+        text-decoration: none;
+    }
+    ul#navigation_pri li a:hover, ul#navigation_pri li a:focus{
+        color:#333;
+        text-decoration: underline;
+    }
+    .home ul#navigation_pri li.nav_home,.routes ul#navigation_pri li.nav_routes{
+        background-color: #f5f5f5;
+    }
+    .home ul#navigation_pri li.nav_home a,.routes ul#navigation_pri li.nav_routes a{
+        color:#278dab;
+        background:#f5f5f5 0 center no-repeat;
+        padding:0 0 0 20px;
+    }
+    .home ul#navigation_pri li.nav_home a:hover,
+    .home ul#navigation_pri li.nav_home a:focus,
+    .routes ul#navigation_pri li.nav_routes a:hover,
+    .routes ul#navigation_pri li.nav_routes a:focus{
+        text-decoration: none;
+        color:#000;
+    }
+    .home ul#navigation_pri li.nav_home a{
+        background-image: url(img/cd.png);
+    }
+    blockquote{
+        position:relative;
+        width:505px;
+        float: right;
+        padding:0 70px 20px 0;
+        background: url(img/mv.png) no-repeat right top;
+    }
 </style>
 <body class="home">
-    <ul class="navigaion_pri">
-        <li class="nav_home"><a href="#">Home</a></li>
+    <ul id="navigation_pri">
+        <li class="nav_home"><a href="#">Home</a>
+            <blockquote id="johnmuir">
+                <p>hello hello hello world world</p>
+                <p><cite>John Muir, 1903</cite></p>
+            </blockquote>
+        </li>
         <li class="nav_routes"><a href="#">routs</a></li>
         <li class="nav_about"><a href="#">about</a></li>
         <li class="nav_shop"><a href="#">shop</a></li>
     </ul>
+    
 </body>
 </html>
